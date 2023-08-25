@@ -1,59 +1,13 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
-</script>
-
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+<section class="sm:mt-6 mt-2 px-6">
+	<!-- hero section -->
+	<div class="w-full min-h-full place-content-center grid grid-cols-1 place-items-center my-auto">
+		<!-- text -->
+		<h1 class="font-extrabold text-6xl md:text-7xl lg:text-8xl max-w-7xl text-center font-head">
+			Welcome to the Dev Coven SvelteKit Starter Template!
+		</h1>
+		<p class="mt-3 text-center text-xl max-w-3xl opacity-90">
+			Let's build an amazing blog, utilizing blazing fast technologies and simple tooling to make
+			simple and intuitive websites
+		</p>
+	</div>
 </section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
